@@ -14,6 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/registration")
 // url:http://localhost:8081/api/v1/registration
+
+
 public class RegistrationController {
     private RegistrationsService registrationsService;
 
@@ -21,7 +23,7 @@ public class RegistrationController {
         this.registrationsService = registrationsService;
     }
     //Get All the data from DB
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Registration>> getAllRegistration(){
 
         List<Registration> registration= registrationsService.getRegistration();
